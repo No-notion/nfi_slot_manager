@@ -112,6 +112,6 @@ if __name__ == "__main__":
     x = ConfigManager("/home/devin/develop/ft_userdata/user_data/config.json")
     ret = x.find_max_open_trades()
     print(ret)
-    ret = x.update_max_open_trades(6)
+    #ret = x.update_max_open_trades(6)
     ret = x.find_max_open_trades()
     print(ret)

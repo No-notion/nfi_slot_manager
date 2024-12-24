@@ -50,10 +50,14 @@ def main():
             max_loss
         )
         logger.info(f"Free Slots Calculation: {log_message}")
+        logger.info(f"free slots {free_slots}")
         
         # Calculate target slots
-        target_slots = current_max_trades = trade_stats['total_open'] + free_slots
+        target_slots = trade_stats['total_open'] + free_slots
+
+        logger.info(f"targets slots {target_slots}")
         target_slots = slot_manager.check_slot_limits(target_slots)
+        logger.info(f"targets slots {target_slots}")
         
         # Determine if update is needed
         if target_slots != current_max_trades:
@@ -98,3 +102,4 @@ Installation:
 2. Adjust config.py with your specific paths and parameters
 3. Set up appropriate Docker and file system permissions
 """
+
