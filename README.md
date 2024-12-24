@@ -78,5 +78,5 @@ update free slots for freqtrade strategy nfi
 **Final idle slots:** 2  
 **Total slots:** 6 (4 + 2)
 
-*/10 * * * * /home/devin/develop/nfi_slot_manager/cron.sh >> /home/devin/develop/nfi_slot_manager/cron.log 2>&1
+*/10 * * * * bash /home/devin/develop/nfi_slot_manager/cron.sh >> /home/devin/develop/nfi_slot_manager/cron.log 2>&1
 
