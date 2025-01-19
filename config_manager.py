@@ -94,7 +94,7 @@ class ConfigManager:
         backup_path = f"{update_path}.bak"
         try:
             #os.copy(update_path, backup_path)
-            shutil.copy(update_path, backup_path)
+            #shutil.copy(update_path, backup_path)
             
             # Write updated config
             with open(update_path, 'w') as f:
@@ -112,6 +112,7 @@ if __name__ == "__main__":
     x = ConfigManager("/home/devin/develop/ft_userdata/user_data/config.json")
     ret = x.find_max_open_trades()
     print(ret)
-    #ret = x.update_max_open_trades(6)
+    ret = x.update_max_open_trades(9)
+    print(ret)  
     ret = x.find_max_open_trades()
     print(ret)
